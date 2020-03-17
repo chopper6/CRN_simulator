@@ -33,11 +33,11 @@ maj_concen = total - min_concen
 
 
 # had: max_time = 10, reps = 20-30
-STANDARD_PARAMS = ({'consuming':False, 'gamma':.01, 'delta':.01, 'alpha':.01, 'reps':2000, 'max_time':1,
+STANDARD_PARAMS = ({'consuming':False, 'gamma':.01, 'delta':.01, 'alpha':.01, 'reps':200, 'max_time':10,
 		'A1_t0':maj_concen, 'B1_t0':maj_concen, 'A0_t0':min_concen, 'B0_t0':min_concen, 'error_rate':err_rate,
 		'plot_period':1, 'out_dir':'./output/', 'save_fig':False, 'correct':'Y0', 'incorrect':'Y1',
 		'stop_condition':models.dontStop, 'amp_time':.1, 'track_time':True, 'write_params_on_img':True,
-		'conf_interval':'manual'})
+		'conf_interval':'normal'})
 
 
 REALISTIC_PARAMS = ({'consuming':False, 'gamma':10**-2, 'delta':10**-13, 'alpha':10**-13, 'reps':100, 'max_time':1,
@@ -155,7 +155,7 @@ def over_time_2d():
 	params['gamma'] = .01
 	#gad = [[l,l],[l,h],[h,l],[h,h]]
 	#gad = [[.001,.1],[.01,.01],[.1,.001]] #THIS
-	gad = [[.001,.001,.1],[.001,.1,.001],[.1,.001,.001]] # AND THIS
+	gad = [[.01,.01,.1],[.01,.1,.01],[.1,.01,.01]] # AND THIS
 
 	#gad = [[.01,.01,.1],[.01,.01,.2],[.01,.01,.25],[.01,.01,.28],[.01,.01,.3]]
 
